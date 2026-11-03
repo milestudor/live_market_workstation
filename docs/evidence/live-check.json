@@ -1,0 +1,53 @@
+{
+  "captured_utc": "2026-11-03T22:31:33.740861+00:00",
+  "kind": "actual Yahoo provider observation, not synthetic",
+  "route": "Yahoo \u2192 yfinance adapter \u2192 FastAPI callback \u2192 SQLite \u2192 local WebSocket \u2192 chart snapshot",
+  "symbol": "AAPL",
+  "price": 330.7959,
+  "source": "yahoo-stream",
+  "source_time": 1793745045.0,
+  "receipt_time": 1793745048.803252,
+  "observation_id": 4002,
+  "identity": "yahoo-stream:tick:AAPL:1793745045.000",
+  "revision": 1,
+  "feed_state": "connected",
+  "feed_last_received": 1793745091.1458461,
+  "statistics": {
+    "observations": 4007,
+    "deliveries": 11814,
+    "duplicates": 7807,
+    "revisions": 4
+  },
+  "chart_bars": 600,
+  "last_candle": {
+    "time": 1793745000,
+    "open": 330.7422,
+    "high": 330.7959,
+    "low": 330.5,
+    "close": 330.7959,
+    "volume": null,
+    "coverage": "observed ticks \u00b7 volume unavailable",
+    "complete": true
+  },
+  "raw_provider_sample": {
+    "change": -1.1040955,
+    "change_percent": -0.33265907,
+    "exchange": "NMS",
+    "id": "AAPL",
+    "market_hours": 2,
+    "price": 330.7959,
+    "price_hint": "2",
+    "quote_type": 8,
+    "time": "1793745045000"
+  },
+  "checks": [
+    "WebSocket snapshot source is yahoo-stream",
+    "matching version exists in SQLite",
+    "last chart close equals captured quote"
+  ],
+  "limits": [
+    "after-hours prices observed; day_volume absent",
+    "regular-session live volume not yet observed",
+    "this is one smoke check, not a guarantee of feed availability"
+  ]
+}
