@@ -3,7 +3,7 @@
 **Status:** Working Part 4.1 implementation; this report is a draft until the student reviews it and adds the demonstration video.
 
 - **Repository:** https://github.com/milestudor/live_market_workstation
-- **Application commit:** To be filled after the verified application commit.
+- **Application commit:** [737db649140fb1cc1fe10e299c4d2e1a4b4dafbb](https://github.com/milestudor/live_market_workstation/commit/737db649140fb1cc1fe10e299c4d2e1a4b4dafbb). Documentation-only follow-up commits may update verification metadata; application code is identified by this commit.
 - **30–60 second demonstration/process video:** **Pending — add an instructor-accessible link before submitting.** See the [demo checklist](https://github.com/milestudor/live_market_workstation/blob/main/docs/demo.md).
 
 ## Completed

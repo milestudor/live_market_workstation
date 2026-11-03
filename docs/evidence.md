@@ -13,7 +13,7 @@ This is a selected, redacted development record, not a complete chat export. No 
 | Actual Yahoo | [Live-path capture](evidence/live-check.json) | Real after-hours AAPL stream observation matched its SQLite version and the local WebSocket chart close. Capture at 5:31 PM Eastern. No synthetic values used in this check. |
 | Actual browser | [Screenshot](evidence/live-dashboard.png) | Running localhost UI, actual Yahoo history + stream, source-age display, and explicit unavailable stream volume. Narrow-window view. |
 | Offline/failure | Automated provider connection exception + offline browser backend | Unavailable/retry state and explicit disabled-feed UI verified with controlled fixtures. Initial real TLS failure was also observed; this was a local certificate problem, not a proven Yahoo outage. |
-| Clean checkout | Recorded after repository commit | See the final verification entry below. |
+| Clean checkout | Application commit `737db649140fb1cc1fe10e299c4d2e1a4b4dafbb` | Fresh Python environment + pinned requirements, fresh `npm ci`, 17 backend checks, production build, and both browser projects passed. No tracked changes remained in the checkout. |
 
 The live capture recorded 4,007 immutable observation versions and 11,814 delivery receipts, including 7,807 duplicates and 4 revisions. Repeated startup history requests explain most duplicates; duplicate receipts remain visible without multiplying chart volume. These counters are a capture, not an expected stable test result. The initial history request loaded 3,900 minute bars across five symbols (two sessions).
 
@@ -64,3 +64,9 @@ The live capture recorded 4,007 immutable observation versions and 11,814 delive
 ## Student follow-through
 
 Review the generated code and documentation, run the app yourself, record the 30–60 second combined demo/process video, add its accessible link to `report.md`, and verify instructor access to the repository/video. No video, Canvas upload, or student presentation has been completed by this build.
+
+## Clean-checkout verification
+
+A separate clone of application commit `737db649140fb1cc1fe10e299c4d2e1a4b4dafbb` was created after committing the application. A fresh Python virtual environment installed `backend/requirements.txt`; the frontend installed from `package-lock.json` with `npm ci`. Backend result: **17 passed**. Frontend result: **production build passed**. The isolated fixture was seeded into a new database; desktop/mobile browser result: **2 passed**. The clone had no tracked file changes afterward. A previously downloaded Chromium binary was reused; the clone did not reuse frontend modules or the root Python environment.
+
+This verification covers local reproducibility on this Mac. The GitHub Actions workflow is configured, but its hosted result is not asserted here until observed. The report points to the tested application commit; subsequent documentation-only commits fill in evidence metadata.
