@@ -24,7 +24,7 @@ Yahoo does not supply unique trade IDs in this stream. This app treats changed p
 - Production frontend build passed. Desktop and mobile browser checks passed against an isolated synthetic database; those checks are not live-provider evidence.
 - Actual after-hours Yahoo observations reached SQLite, the local WebSocket endpoint, and the browser. A captured AAPL price matched its stored version and chart close. See the [live-path capture](https://github.com/milestudor/live_market_workstation/blob/main/docs/evidence/live-check.json) and [screenshot](https://github.com/milestudor/live_market_workstation/blob/main/docs/evidence/live-dashboard.png).
 - An initial macOS TLS certificate failure was resolved using a trusted certifi bundle while keeping verification enabled. Real after-hours messages omitted volume; the implementation was revised to display unavailable volume instead of a misleading zero. Generated aggregation code and its verification are discussed in the [evidence log](https://github.com/milestudor/live_market_workstation/blob/main/docs/evidence.md).
-- Automated checks are configured in GitHub Actions; local results are distinguished from hosted workflow results in the evidence log.
+- The [GitHub Actions verification run](https://github.com/milestudor/live_market_workstation/actions/runs/41732322570) also passed on Ubuntu, including backend checks, the production build, and desktop/mobile browser tests.
 
 ## Limitations and remaining submission work
 
